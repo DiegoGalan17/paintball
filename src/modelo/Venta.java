@@ -10,32 +10,50 @@ package modelo;
  * @author DIEGO GALAN LLANOS
  */
 public class Venta {
-
-    private int idVenta;
+    
+    private String idVenta;
     private String fecha_Venta;
-    private String nit;
     private int idClientef;
     private int idAdministradorf;
     private int idDetalle_Ventaf;
+    private double total_Venta;
 
     public Venta() {
     }
 
-    public Venta(int idVenta, String fecha_Venta, String nit, int idClientef, int idAdministradorf, int idDetalle_Ventaf) {
+    public Venta(String idVenta, String fecha_Venta, int idClientef, int idAdministradorf, int idDetalle_Ventaf, double total_Venta) {
         this.idVenta = idVenta;
         this.fecha_Venta = fecha_Venta;
-        this.nit = nit;
         this.idClientef = idClientef;
         this.idAdministradorf = idAdministradorf;
         this.idDetalle_Ventaf = idDetalle_Ventaf;
+        this.total_Venta = total_Venta;
     }
 
-    public Venta(String fecha_Venta, String nit, int idClientef, int idAdministradorf, int idDetalle_Ventaf) {
+    public Venta(String fecha_Venta, int idClientef, int idAdministradorf, int idDetalle_Ventaf, double total_Venta) {
         this.fecha_Venta = fecha_Venta;
-        this.nit = nit;
         this.idClientef = idClientef;
         this.idAdministradorf = idAdministradorf;
         this.idDetalle_Ventaf = idDetalle_Ventaf;
+        this.total_Venta = total_Venta;
+    }
+
+    /**
+     * Get the value of total_Venta
+     *
+     * @return the value of total_Venta
+     */
+    public double getTotal_Venta() {
+        return total_Venta;
+    }
+
+    /**
+     * Set the value of total_Venta
+     *
+     * @param total_Venta new value of total_Venta
+     */
+    public void setTotal_Venta(double total_Venta) {
+        this.total_Venta = total_Venta;
     }
 
     /**
@@ -93,24 +111,6 @@ public class Venta {
     }
 
     /**
-     * Get the value of nit
-     *
-     * @return the value of nit
-     */
-    public String getNit() {
-        return nit;
-    }
-
-    /**
-     * Set the value of nit
-     *
-     * @param nit new value of nit
-     */
-    public void setNit(String nit) {
-        this.nit = nit;
-    }
-
-    /**
      * Get the value of fecha_Venta
      *
      * @return the value of fecha_Venta
@@ -133,7 +133,7 @@ public class Venta {
      *
      * @return the value of idVenta
      */
-    public int getIdVenta() {
+    public String getIdVenta() {
         return idVenta;
     }
 
@@ -142,13 +142,8 @@ public class Venta {
      *
      * @param idVenta new value of idVenta
      */
-    public void setIdVenta(int idVenta) {
+    public void setIdVenta(String idVenta) {
         this.idVenta = idVenta;
-    }
-
-    @Override
-    public String toString() {
-        return "Venta{" + "idVenta=" + idVenta + ", fecha_Venta=" + fecha_Venta + ", nit=" + nit + ", idClientef=" + idClientef + ", idAdministradorf=" + idAdministradorf + ", idDetalle_Ventaf=" + idDetalle_Ventaf + '}';
     }
 
 }
