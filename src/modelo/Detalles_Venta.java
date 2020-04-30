@@ -9,36 +9,69 @@ package modelo;
  *
  * @author DIEGO GALAN LLANOS
  */
-public class Detalle_Venta {
+public class Detalles_Venta {
 
     private int idDetalle_Venta;
-    private double total_Venta;
-    private double subtotal_Venta;
     private int cantidadP;
-    private double valor_iva;
     private int idPartidaf;
     private int idProductof;
+    private double ValorUnitario;
+    private int idVentaf;
 
-    public Detalle_Venta() {
+    public Detalles_Venta() {
     }
 
-    public Detalle_Venta(int idDetalle_Venta, double total_Venta, double subtotal_Venta, int cantidadP, double valor_iva, int idPartidaf, int idProductof) {
+    public Detalles_Venta(int idDetalle_Venta, int cantidadP, int idPartidaf, int idProductof, double ValorUnitario, int idVentaf) {
         this.idDetalle_Venta = idDetalle_Venta;
-        this.total_Venta = total_Venta;
-        this.subtotal_Venta = subtotal_Venta;
         this.cantidadP = cantidadP;
-        this.valor_iva = valor_iva;
         this.idPartidaf = idPartidaf;
         this.idProductof = idProductof;
+        this.ValorUnitario = ValorUnitario;
+        this.idVentaf = idVentaf;
     }
 
-    public Detalle_Venta(double total_Venta, double subtotal_Venta, int cantidadP, double valor_iva, int idPartidaf, int idProductof) {
-        this.total_Venta = total_Venta;
-        this.subtotal_Venta = subtotal_Venta;
+    public Detalles_Venta(int cantidadP, int idPartidaf, int idProductof, double ValorUnitario, int idVentaf) {
         this.cantidadP = cantidadP;
-        this.valor_iva = valor_iva;
         this.idPartidaf = idPartidaf;
         this.idProductof = idProductof;
+        this.ValorUnitario = ValorUnitario;
+        this.idVentaf = idVentaf;
+    }
+
+    /**
+     * Get the value of idVentaf
+     *
+     * @return the value of idVentaf
+     */
+    public int getIdVentaf() {
+        return idVentaf;
+    }
+
+    /**
+     * Set the value of idVentaf
+     *
+     * @param idVentaf new value of idVentaf
+     */
+    public void setIdVentaf(int idVentaf) {
+        this.idVentaf = idVentaf;
+    }
+
+    /**
+     * Get the value of ValorUnitario
+     *
+     * @return the value of ValorUnitario
+     */
+    public double getValorUnitario() {
+        return ValorUnitario;
+    }
+
+    /**
+     * Set the value of ValorUnitario
+     *
+     * @param ValorUnitario new value of ValorUnitario
+     */
+    public void setValorUnitario(double ValorUnitario) {
+        this.ValorUnitario = ValorUnitario;
     }
 
     /**
@@ -78,24 +111,6 @@ public class Detalle_Venta {
     }
 
     /**
-     * Get the value of valor_iva
-     *
-     * @return the value of valor_iva
-     */
-    public double getValor_iva() {
-        return valor_iva;
-    }
-
-    /**
-     * Set the value of valor_iva
-     *
-     * @param valor_iva new value of valor_iva
-     */
-    public void setValor_iva(double valor_iva) {
-        this.valor_iva = valor_iva;
-    }
-
-    /**
      * Get the value of cantidadP
      *
      * @return the value of cantidadP
@@ -111,42 +126,6 @@ public class Detalle_Venta {
      */
     public void setCantidadP(int cantidadP) {
         this.cantidadP = cantidadP;
-    }
-
-    /**
-     * Get the value of subtotal_Venta
-     *
-     * @return the value of subtotal_Venta
-     */
-    public double getSubtotal_Venta() {
-        return subtotal_Venta;
-    }
-
-    /**
-     * Set the value of subtotal_Venta
-     *
-     * @param subtotal_Venta new value of subtotal_Venta
-     */
-    public void setSubtotal_Venta(double subtotal_Venta) {
-        this.subtotal_Venta = subtotal_Venta;
-    }
-
-    /**
-     * Get the value of total_Venta
-     *
-     * @return the value of total_Venta
-     */
-    public double getTotal_Venta() {
-        return total_Venta;
-    }
-
-    /**
-     * Set the value of total_Venta
-     *
-     * @param total_Venta new value of total_Venta
-     */
-    public void setTotal_Venta(double total_Venta) {
-        this.total_Venta = total_Venta;
     }
 
     /**
@@ -169,7 +148,7 @@ public class Detalle_Venta {
 
     @Override
     public String toString() {
-        return "Detalle_Venta{" + "idDetalle_Venta=" + idDetalle_Venta + ", total_Venta=" + total_Venta + ", subtotal_Venta=" + subtotal_Venta + ", cantidadP=" + cantidadP + ", valor_iva=" + valor_iva + ", idPartidaf=" + idPartidaf + ", idProductof=" + idProductof + '}';
+        return "Detalles_Venta{" + "idDetalle_Venta=" + idDetalle_Venta + ", cantidadP=" + cantidadP + ", idPartidaf=" + idPartidaf + ", idProductof=" + idProductof + ", ValorUnitario=" + ValorUnitario + ", idVentaf=" + idVentaf + '}';
     }
 
 }
