@@ -32,7 +32,7 @@ public class Register extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel_X = new javax.swing.JLabel();
-        jLabel_Login = new javax.swing.JLabel();
+        jLabel_Register = new javax.swing.JLabel();
         jLabel_min = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel_ID = new javax.swing.JLabel();
@@ -65,10 +65,10 @@ public class Register extends javax.swing.JFrame {
             }
         });
 
-        jLabel_Login.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel_Login.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
-        jLabel_Login.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel_Login.setText("Login Form");
+        jLabel_Register.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel_Register.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
+        jLabel_Register.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel_Register.setText("Register Form");
 
         jLabel_min.setBackground(new java.awt.Color(0, 0, 0));
         jLabel_min.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
@@ -87,8 +87,8 @@ public class Register extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel_Login)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 222, Short.MAX_VALUE)
+                .addComponent(jLabel_Register)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 196, Short.MAX_VALUE)
                 .addComponent(jLabel_min)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel_X)
@@ -100,7 +100,7 @@ public class Register extends javax.swing.JFrame {
                 .addContainerGap(22, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel_X)
-                    .addComponent(jLabel_Login)
+                    .addComponent(jLabel_Register)
                     .addComponent(jLabel_min))
                 .addContainerGap())
         );
@@ -372,10 +372,10 @@ public class Register extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel_CellPhone;
     private javax.swing.JLabel jLabel_ID;
     private javax.swing.JLabel jLabel_LastName;
-    private javax.swing.JLabel jLabel_Login;
     private javax.swing.JLabel jLabel_Name;
     private javax.swing.JLabel jLabel_New_Register;
     private javax.swing.JLabel jLabel_PassWord;
+    private javax.swing.JLabel jLabel_Register;
     private javax.swing.JLabel jLabel_X;
     private javax.swing.JLabel jLabel_min;
     private javax.swing.JPanel jPanel1;

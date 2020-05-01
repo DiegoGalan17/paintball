@@ -161,6 +161,11 @@ public class LoginForm extends javax.swing.JFrame {
                 jTextField_UsernameFocusLost(evt);
             }
         });
+        jTextField_Username.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTextField_UsernameMouseClicked(evt);
+            }
+        });
         jTextField_Username.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField_UsernameActionPerformed(evt);
@@ -173,6 +178,18 @@ public class LoginForm extends javax.swing.JFrame {
         jButton_Cancel.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
         jButton_Cancel.setForeground(new java.awt.Color(255, 255, 255));
         jButton_Cancel.setText("Cancel");
+        jButton_Cancel.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                jButton_CancelFocusGained(evt);
+            }
+        });
+        jButton_Cancel.addHierarchyBoundsListener(new java.awt.event.HierarchyBoundsListener() {
+            public void ancestorMoved(java.awt.event.HierarchyEvent evt) {
+                jButton_CancelAncestorMoved(evt);
+            }
+            public void ancestorResized(java.awt.event.HierarchyEvent evt) {
+            }
+        });
         jButton_Cancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton_CancelActionPerformed(evt);
@@ -240,8 +257,10 @@ public class LoginForm extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -374,6 +393,18 @@ public class LoginForm extends javax.swing.JFrame {
             mostrar = true;
         }
     }//GEN-LAST:event_jButton_VerActionPerformed
+
+    private void jTextField_UsernameMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField_UsernameMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField_UsernameMouseClicked
+
+    private void jButton_CancelFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jButton_CancelFocusGained
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton_CancelFocusGained
+
+    private void jButton_CancelAncestorMoved(java.awt.event.HierarchyEvent evt) {//GEN-FIRST:event_jButton_CancelAncestorMoved
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton_CancelAncestorMoved
 
     /**
      * @param args the command line arguments
