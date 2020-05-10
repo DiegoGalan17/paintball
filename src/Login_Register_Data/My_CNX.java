@@ -11,12 +11,11 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class My_CNX {
-    // falta hacer conexion entre el registro y el admin <----   
+public class My_CNX 
+{
+    private static String idAdministrador = "";
     
-    //   -->   Este es para hacer una prueba si corre o no corre <--
-    
-    private static String nombre_Admin = "";
+    private static String nombre_Admin = "Localhost";
     private static String apellido_Admin = "";    
     private static String nombre2_Admin = "";    
     private static String apellido2_Admin = "";    
@@ -24,22 +23,25 @@ public class My_CNX {
     private static String cedulaA = "";
     private static String contrasenaA = "";
     
+    
     public static Connection getConnection ()
     {
-        Connection cnx = null;
-        MysqlDataSource datasource = new MysqlDataSource ();
+       Connection cnx = null;
+        MysqlDataSource datasource = new MysqlDataSource (); 
+        
+        datasource.setServerName(idAdministrador);
+       
         datasource.setServerName(nombre_Admin);
         datasource.setServerName(nombre2_Admin);
-       
+        
         datasource.setDatabaseName(apellido2_Admin);
         datasource.setDatabaseName(apellido_Admin);
         
-      //data for the use and password, how the user can login  <-- 
+        //data for the use and password, how the user can login  <-- 
         datasource.setUser(cedulaA);
         datasource.setPassword(contrasenaA);
-       
-    
-        try {
+        
+    try {
             cnx = datasource.getConnection();
         } catch (SQLException ex) {
             Logger.getLogger("" + My_CNX.class.getName()).log(Level.SEVERE, null, ex);

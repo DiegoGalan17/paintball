@@ -7,7 +7,7 @@ package control;
 
 /**
  *
- * @author DIEGO GALAN LLANOS
+ * @author familia
  */
 public class ControlProducto {
     
