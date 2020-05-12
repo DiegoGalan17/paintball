@@ -83,10 +83,10 @@ public class Menu_Form extends javax.swing.JFrame {
 
         jPanel_title.setFont(new java.awt.Font("Adobe Caslon Pro", 1, 18)); // NOI18N
         jPanel_title.setForeground(new java.awt.Color(255, 161, 0));
-        jPanel_title.setText("LOGIN");
+        jPanel_title.setText("MENU");
 
         jLabel_minimize.setFont(new java.awt.Font("Lucida Grande", 1, 19)); // NOI18N
-        jLabel_minimize.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel_minimize.setForeground(new java.awt.Color(255, 161, 0));
         jLabel_minimize.setText("-");
         jLabel_minimize.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel_minimize.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -101,8 +101,9 @@ public class Menu_Form extends javax.swing.JFrame {
             }
         });
 
+        jLabel_close.setBackground(new java.awt.Color(255, 255, 255));
         jLabel_close.setFont(new java.awt.Font("Lucida Grande", 1, 19)); // NOI18N
-        jLabel_close.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel_close.setForeground(new java.awt.Color(255, 161, 0));
         jLabel_close.setText("x");
         jLabel_close.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel_close.addMouseListener(new java.awt.event.MouseAdapter() {
