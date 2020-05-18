@@ -11,4 +11,22 @@ package control;
  */
 public class ControlAdministrador {
     
+    private int numventas;
+
+    private String nombre;
+
+    private int numpartidas;
+    
+    private int numcancha;
+    
+    
+
+    public void listaVentasclientes() {
+    }
+ 
+    public void listapartidasjugadas() {
+    }
+    
+    public void listacanchas() {
+    }
 }

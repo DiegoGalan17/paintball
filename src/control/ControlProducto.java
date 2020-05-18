@@ -11,4 +11,24 @@ package control;
  */
 public class ControlProducto {
     
+    private String idmecato;
+    
+    private String idbebidas;
+
+    private int cantIng;
+
+    private int cantmecato;
+    
+    private int cantbebidas;
+
+    private Double precio;
+
+    private Object untitledField;
+
+    private int numeropedido;
+
+    public void ProductoMasVendido() {
+    }
 }
+    
+
