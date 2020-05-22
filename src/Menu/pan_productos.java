@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Principal;
+package Menu;
 
 import Login_Register_Data.Login_Form;
 import control.BaseDatos;
@@ -73,6 +73,10 @@ public class pan_productos extends javax.swing.JPanel {
            // en el video se llamo la clase auxiar que es donde estaban los productos, en este caso es ControlProducto
      //     ControlProducto.formatoTabla(tblDatos, new int []{05,50,60,10,10,40,100,40});
         }
+
+        /**
+         *
+         */
         public frmProducto() {
             initComponents();
             dtm.addColumn("id");
