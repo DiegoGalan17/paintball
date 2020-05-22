@@ -11,6 +11,4 @@ package control;
  */
 public class ControlDetalle_Venta {
     
-    //
-    
 }

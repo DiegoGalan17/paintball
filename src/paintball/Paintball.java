@@ -1,7 +1,6 @@
 package Paintball;
 import control.BaseDatos;
 
-
 public class Paintball {
 
     /**
@@ -11,13 +10,13 @@ public class Paintball {
         // TODO code application logic here
 
   BaseDatos objb=new BaseDatos();
-        boolean t=objb.crearConexion();
+        boolean t=objb.validarConexion();
         if(t==true){
+            
             System.out.println("Conexión exitosa");
         }else{
           System.out.println("Conexión No exitosa");  
         }
-
     }
 
 }

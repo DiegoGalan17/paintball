@@ -1,4 +1,4 @@
-package Menu;
+package Principal;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -41,7 +41,6 @@ public class Menu_Form extends javax.swing.JFrame {
         jButton_Productos = new javax.swing.JButton();
         jButton_Canchas = new javax.swing.JButton();
         jButton_Partidas = new javax.swing.JButton();
-        jButton_Salir = new javax.swing.JButton();
         BN = new javax.swing.JPanel();
         jLabel_Fondo = new javax.swing.JLabel();
 
@@ -131,6 +130,11 @@ public class Menu_Form extends javax.swing.JFrame {
                 jButton_HomeMouseClicked(evt);
             }
         });
+        jButton_Home.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_HomeActionPerformed(evt);
+            }
+        });
 
         jButton_ventas.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
         jButton_ventas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/cuenta.png"))); // NOI18N
@@ -167,6 +171,11 @@ public class Menu_Form extends javax.swing.JFrame {
                 jButton_CanchasMouseClicked(evt);
             }
         });
+        jButton_Canchas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_CanchasActionPerformed(evt);
+            }
+        });
 
         jButton_Partidas.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
         jButton_Partidas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Partidas.png"))); // NOI18N
@@ -175,16 +184,6 @@ public class Menu_Form extends javax.swing.JFrame {
         jButton_Partidas.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton_PartidasMouseClicked(evt);
-            }
-        });
-
-        jButton_Salir.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
-        jButton_Salir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/flecha-izquierda.png"))); // NOI18N
-        jButton_Salir.setText("Salir");
-        jButton_Salir.setIconTextGap(10);
-        jButton_Salir.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton_SalirMouseClicked(evt);
             }
         });
 
@@ -199,10 +198,7 @@ public class Menu_Form extends javax.swing.JFrame {
                     .addComponent(jButton_Home)
                     .addComponent(jButton_Canchas)
                     .addComponent(jButton_Productos)
-                    .addComponent(jButton_ventas)
-                    .addGroup(pnmenuLayout.createSequentialGroup()
-                        .addComponent(jButton_Salir)
-                        .addGap(28, 28, 28)))
+                    .addComponent(jButton_ventas))
                 .addContainerGap(49, Short.MAX_VALUE))
         );
         pnmenuLayout.setVerticalGroup(
@@ -218,9 +214,7 @@ public class Menu_Form extends javax.swing.JFrame {
                 .addComponent(jButton_Canchas, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton_Partidas)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 119, Short.MAX_VALUE)
-                .addComponent(jButton_Salir)
-                .addGap(50, 50, 50))
+                .addContainerGap(198, Short.MAX_VALUE))
         );
 
         jPanel1.add(pnmenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 220, 430));
@@ -246,7 +240,6 @@ public class Menu_Form extends javax.swing.JFrame {
     private void jButton_ventasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton_ventasMouseClicked
         // TODO add your handling code here:
         pn_ventas ventas = new pn_ventas();
-        
         ventas.setSize(getWidth(), getHeight());
         ventas.setLocation(5,5);
         
@@ -257,20 +250,13 @@ public class Menu_Form extends javax.swing.JFrame {
 
     private void jButton_ProductosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton_ProductosMouseClicked
         // TODO add your handling code here:
-        pn_productos productos = new pn_productos();
-        
-        productos.setSize(getWidth(), getHeight());
-        productos.setLocation(5,5);
-        
-        BN.add(productos, BorderLayout.CENTER);
-        BN.revalidate();
-        BN.repaint();
+        n_productos npd = new n_productos();
+        npd.setVisible(true);
     }//GEN-LAST:event_jButton_ProductosMouseClicked
 
     private void jButton_CanchasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton_CanchasMouseClicked
         // TODO add your handling code here:
         pn_canchas canchas = new pn_canchas();
-        
         canchas.setSize(getWidth(), getHeight());
         canchas.setLocation(5,5);
         
@@ -280,15 +266,7 @@ public class Menu_Form extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton_CanchasMouseClicked
 
     private void jButton_HomeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton_HomeMouseClicked
-        // TODO add your handling code here:
-//        Menu_Form MENU new Menu_Form ();
-//        
-//        MENU.setSize(getWidth(), getHeight());
-//        MENU.setLocation(5,5);
-//        
-//        BN.add(MENU, BorderLayout.CENTER);
-//        BN.revalidate();
-//        BN.repaint();
+
     }//GEN-LAST:event_jButton_HomeMouseClicked
 
     private void jButton_PartidasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton_PartidasMouseClicked
@@ -339,20 +317,9 @@ public class Menu_Form extends javax.swing.JFrame {
         jLabel_close.setForeground(Color.white);
     }//GEN-LAST:event_jLabel_closeMouseEntered
 
-    private void jButton_SalirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton_SalirMouseClicked
-        // TODO add your handling code here:
-  
-       //para redirigirse al login 
-        
-//        Login_Form lf = new Login_Form();
-//        lf.setVisible(true);
-//        lf.pack();
-//        lf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-//        this.dispose();
-    }//GEN-LAST:event_jButton_SalirMouseClicked
-
     private void jButton_ventasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_ventasActionPerformed
         // TODO add your handling code here:
+        
     }//GEN-LAST:event_jButton_ventasActionPerformed
 
     private void jLabel_minimizeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_minimizeMouseClicked
@@ -373,6 +340,14 @@ public class Menu_Form extends javax.swing.JFrame {
         jLabel_minimize.setBorder(label_border);
         jLabel_minimize.setForeground(Color.white);
     }//GEN-LAST:event_jLabel_minimizeMouseExited
+
+    private void jButton_HomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_HomeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton_HomeActionPerformed
+
+    private void jButton_CanchasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_CanchasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton_CanchasActionPerformed
 
     /**
      * @param args the command line arguments
@@ -401,8 +376,6 @@ public class Menu_Form extends javax.swing.JFrame {
         }
         //</editor-fold>
         //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -420,7 +393,6 @@ public class Menu_Form extends javax.swing.JFrame {
     private javax.swing.JButton jButton_Menu;
     private javax.swing.JButton jButton_Partidas;
     private javax.swing.JButton jButton_Productos;
-    private javax.swing.JButton jButton_Salir;
     private javax.swing.JButton jButton_ventas;
     private javax.swing.JLabel jLabel_Fondo;
     private javax.swing.JLabel jLabel_close;
